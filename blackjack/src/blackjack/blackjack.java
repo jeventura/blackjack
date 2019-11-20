@@ -36,7 +36,7 @@ public class blackjack {
         TextIO.put("Numero de jugadores:");
 
         numero = TextIO.getlnInt();
-        TextIO.put("Con que cantidad empezara cada jugador (euros)?");
+        TextIO.put("Con que cantidad empezara cada jugador (Dolares)?");
 
         saldo = TextIO.getlnInt();
 
@@ -61,10 +61,10 @@ public class blackjack {
                     bancarrota[j] = true;
                 }
                 TextIO.putln();
-                TextIO.putln("JUGADOR NUMERO " + (j + 1) + ". Tiene " + saldos[j] + " euros.");
+                TextIO.putln("JUGADOR NUMERO " + (j + 1) + ". Tiene " + saldos[j] + " dolares.");
                 if (!bancarrota[j]) {
                     do {
-                        TextIO.putln("Cuantos euros quiere apostar? (0 para salir)");
+                        TextIO.putln("Cuantos dolares quiere apostar? (0 para salir)");
                         manoJugador[j].apuesta = TextIO.getlnInt();
                         if (manoJugador[j].apuesta < 0 || manoJugador[j].apuesta > saldos[j]) {
                             TextIO.putln("Su apuesta debe estar entre 0 y " + saldos[j] + '.');
