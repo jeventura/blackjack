@@ -28,7 +28,7 @@ public class blackjack {
         TextIO.putln("Julio Ventura");
         TextIO.putln("Mario Moisa");
         TextIO.putln("Karen");
-        TextIO.putln("Diana Alfaro");
+        TextIO.putln("Diana Veronica Alfaro");
         
         TextIO.putln();
 
