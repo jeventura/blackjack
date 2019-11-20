@@ -25,10 +25,10 @@ public class blackjack {
         TextIO.putln();
         TextIO.putln("    AUTORES");
         TextIO.putln();
-        TextIO.putln("Julio Ventura");
-        TextIO.putln("Mario Moisa");
-        TextIO.putln("Karen");
-        TextIO.putln("Diana Veronica Alfaro");
+        TextIO.putln("Julio Eduardo Ventura Escamilla | 00023199");
+        TextIO.putln("Mario Orlando Moisa Candray | 00135115");
+        TextIO.putln("Karen Elizabeth Amaya Navarrete | 00073518");
+        TextIO.putln("Diana Veronica Alfaro Cabrera | 00226217");
         
         TextIO.putln();
 
