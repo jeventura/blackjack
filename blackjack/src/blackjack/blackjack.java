@@ -32,11 +32,9 @@ public class blackjack {
         
         TextIO.putln();
 
-        // Preguntamos por número de jugadores y por la cantidad con la que empiezan 
-        TextIO.put("Numero de jugadores:");
-
-        numero = TextIO.getlnInt();
-        TextIO.put("Con que cantidad empezara cada jugador (Dolares)?");
+       
+            numero = 0x1;
+        TextIO.put("Con que cantidad empezara a jugar (Dolares)?");
 
         saldo = TextIO.getlnInt();
 
