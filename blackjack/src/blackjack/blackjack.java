@@ -50,7 +50,7 @@ public class blackjack {
         // Comienza el bucle...               
         while (true) {
 
-// Le preguntamos a cada jugador cuanto dinero desea apostar                  
+// Le preguntamos al jugador cuanto dinero desea apostar                  
             for (int j = 0; j < numero; j++) {
 // Creamos la mano      
                 manoJugador[j] = new Mano();
@@ -59,7 +59,8 @@ public class blackjack {
                     bancarrota[j] = true;
                 }
                 TextIO.putln();
-                TextIO.putln("JUGADOR NUMERO " + (j + 1) + ". Tiene " + saldos[j] + " dolares.");
+                TextIO.putln("JUGADOR Tiene " + saldos[j] + " dolares.");
+               // TextIO.putln("Recuerde que tiene posibilidades de con "+ [j]+ "cartas");
                 if (!bancarrota[j]) {
                     do {
                         TextIO.putln("Cuantos dolares quiere apostar? (0 para salir)");
@@ -80,11 +81,11 @@ public class blackjack {
                     } while (manoJugador[j].apuesta < 0 || manoJugador[j].apuesta > saldos[j]);
                 }
             }
-// En caso de que no se hayan arruinado todos los jugadores entramos al metodo jugar  
+// En caso de que no se haya arruinado el jugador entramos al metodo jugar  
             if (!queda_alguno(bancarrota, numero))resultados = jugar(numero, manoJugador, bancarrota);
             else {
                 TextIO.putln();
-                TextIO.putln("Todos los jugadores se han quedado sin dinero o no hay mas jugadores");
+                TextIO.putln("El jugador se ha quedado sin dinero o no quiere jugar");
                 TextIO.putln("Adioooos");
                 System.exit(-1);
             }
@@ -179,23 +180,27 @@ for(int j=0;j<numero;j++){
  
    // Si ninguno de los 2 tiene BJ seguimos con el juego 
  
-   // Comienza la iteracion para cada uno de los jugadores 
+   // Comienza la iteracion para el jugador
  
           for(j=0;j<jugadores;j++){ 
  
-    // Mostramos las cartas de los jugadores y una de las cartas de la banca
+    // Mostramos las cartas del jugador y una de las cartas de la banca
     
-        TextIO.putln("--------- JUGADOR "+(j+1)+" ---------");
+        TextIO.putln("--------- JUGADOR ---------");
         TextIO.putln();
         fin=false;
         while (!bancarrota[j]) {
             TextIO.putln();
-            TextIO.putln("Jugador "+(j+1)+".Sus cartas son:");
+            TextIO.putln("Jugador Sus cartas son:");
             for ( i = 0; i < manoJugador[j].contar(); i++ )
                 TextIO.putln("    " + manoJugador[j].obtenerCarta(i));
                 TextIO.putln("Y suman un total de " + manoJugador[j].getBlackjackValor()+" puntos.");
+                TextIO.putln("Para ganar necesita un  : "+ manoJugador[j].getResta()+"");
+               TextIO.putln("Su probabilidad de ganar es de : "+ manoJugador[j].getProb());
                 TextIO.putln();
                 TextIO.putln("La banca muestra " + manoBanca.obtenerCarta(0));
+                TextIO.putln("La banca muestra " + manoBanca.obtenerCarta(1));
+                
                 TextIO.putln(); 
 
 // Carta o se planta?
@@ -339,5 +344,6 @@ boolean bancarrota_total=true;
     }
 } 
  
+
 
  

@@ -89,4 +89,16 @@ public class Mano {
 
         return val;
     }
+    public int getResta(){
+        int resta;
+        resta = 21-getBlackjackValor();
+        return resta;
+        
+    }
+    
+   public int getProb(){
+       int prob;
+       prob = getResta()/contar();
+       return prob;
+   }
 }
